@@ -1,0 +1,14 @@
+<div class="header-container">
+    
+    <div class="users-container" (mouseenter)="mouseEnterUsers()" (mouseleave)="mouseLeaveUsers()">
+        <div class="users-option-container" [ngStyle]="{'width':imageWidth}" *ngFor="let u of users">
+
+            <!-- {{envMode}}/uploads/ - Path to server images folder  -->
+            <img src="{{envMode}}/uploads/{{u.image.imageName}}{{u.image.imageType}}" (click)="chooseUser(u)" alt="userImg" />
+        </div>    
+    </div>
+
+</div>
+
+
+

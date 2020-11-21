@@ -1,0 +1,30 @@
+/* Header container */
+.header-container {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+}
+
+/* User container*/
+.users-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    height: 100%;
+    align-items: center;
+    width: 100px; 
+}
+
+/* Users option container */
+.users-option-container {
+    width: 20px;
+    display: inline-block
+}
+
+/* User image  */
+.users-option-container img {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}

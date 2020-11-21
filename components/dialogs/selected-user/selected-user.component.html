@@ -1,0 +1,22 @@
+<div class="selected-user-dialog-container"
+    [style.width]="screenSize === 'xs' ? '100vw' : null"
+    [style.height]="screenSize === 'xs' ? '100vh' : null">
+    
+    <!-- Full user name -->
+    <h2 mat-dialog-title>Hi, my name is {{selectedUser.firstName}} {{selectedUser.lastName}}</h2>
+    <h2 mat-dialog-title>I am {{selectedUser.roles[0].role === 'read' ? 'a user' : 'the admin'}}</h2>
+
+    <!-- More information on user -->
+    <mat-dialog-content>
+        <img class="user-img-dialog" src='{{envMode}}/uploads/{{selectedUser.image.imageName}}{{selectedUser.image.imageType}}' alt="user-img">
+        <p>when you press ok you choose to be <strong>{{selectedUser.firstName}}</strong></p>
+        <p>and you get the authorizations of <strong>{{selectedUser.roles[0].role === 'read' ? 'User' : 'Admin'}}</strong></p>
+    </mat-dialog-content>
+
+    <!-- Operation buttons -->
+    <mat-dialog-actions align="center">
+      <button mat-raised-button mat-dialog-close>Cancel</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true">Ok, I choose you</button>
+    </mat-dialog-actions>
+
+</div>
